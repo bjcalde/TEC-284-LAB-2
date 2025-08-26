@@ -26,13 +26,14 @@
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
-  int timesToBlink = 1;
-  if(timesToBlink > 4) {
-    timesToBlink += 1;
-  }
-  else {
+  int timesToBlink = 5;
+  for(int i = 0; i < timesToBlink; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
+    delay(500);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(500);
   }
+    digitalWrite(LED_BUILTIN, HIGH);
 }
 
 // the loop function runs over and over again forever
